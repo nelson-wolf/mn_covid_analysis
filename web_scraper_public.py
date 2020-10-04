@@ -62,7 +62,7 @@ def df_create(table_name, filename):
         df2.columns = ['Date reported', 'Hospitalized in ICU', 'Hospitalized Not in ICU', 'Total hospitalized', 'Total ICU Hospitalized']
     else:
         df2 = df.rename(columns=df.iloc[0]).drop(df.index[0])
-    filepath = r'C:\Users\nelson.wolf\Desktop\MN_COVID\data\placeholder.csv'
+    filepath = r'filepath.csv'
     filepath2 = filepath.replace('placeholder',filename)
     df2.to_csv(filepath2, index=False)
 
